@@ -3,7 +3,6 @@ let numeroSecreto = gerarNumeroAleatorio();
 
 function gerarNumeroAleatorio(){
   return parseInt (Math.random() * 10) + 1;
-  
 }
 
 function exibirMensagem(tag,texto){
