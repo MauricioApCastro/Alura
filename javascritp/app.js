@@ -28,8 +28,14 @@ function verificarChute() {
       exibirMensagem('p', 'o número é maior!');
     }
     tentativa++;
+    limpaCampo();
   }
  
+}
+function limpaCampo(){
+  let limpa = document.querySelector('input');
+  limpa.value = "";
 
 }
+
 
