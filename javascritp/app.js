@@ -14,7 +14,7 @@ function exibirMensagem(tag, texto) {
 }
 function ExibirMensagemTelaInicial() {
   exibirMensagem('h1', 'Jogo do número secreto');
-  exibirMensagem('p', 'Escolha um número entre 1 e 10');
+  exibirMensagem('p', 'Escolha um número entre 1 e 10!');
 }
 
 
@@ -49,5 +49,8 @@ function reiniciarJogo() {
   tentativa = 1;
   document.getElementById('reiniciar').setAttribute('disabled',true);
 }
+
+
+
 
 
