@@ -17,10 +17,12 @@ exibirMensagem('p', 'Escolha um número entre 1 e 10');
 
 function verificarChute() {
   let chute = document.querySelector('input').value;
- 
+
   if (chute == numeroSecreto) {
     let palavraTentativa = tentativa == 1 ? 'tentativa' : ' tentativas';
-    exibirMensagem('p',` Você descobriu o número secreto com ${tentativa} ${palavraTentativa}!`);
+    exibirMensagem('p', ` Você descobriu o número secreto com ${tentativa} ${palavraTentativa}!`);
+    document.getElementById('reiniciar').removeAttribute('disabled');
+
   } else {
     if (chute > numeroSecreto) {
       exibirMensagem('p', 'o número é menor!');
@@ -30,9 +32,9 @@ function verificarChute() {
     tentativa++;
     limpaCampo();
   }
- 
+
 }
-function limpaCampo(){
+function limpaCampo() {
   let limpa = document.querySelector('input');
   limpa.value = "";
 
