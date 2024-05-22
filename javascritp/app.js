@@ -1,56 +1,44 @@
 
-//let numeroSecreto = gerarNumeroAleatorio();
-let numeroSecreto = 5;
-let tentativa = 1;
+ExibirTextoNaTela('h1', 'Jogo do número secreto');
+ExibirTextoNaTela('p', 'Escolha um número de 1 a 10');
 
-ExibirMensagemTelaInicial()
-function gerarNumeroAleatorio() {
-  return parseInt(Math.random() * 10) + 1;
-}
-
-function exibirMensagem(tag, texto) {
+//insere frases na tela
+function ExibirTextoNaTela(tag, texto) {
   let campo = document.querySelector(tag);
   campo.innerHTML = texto;
 }
-function ExibirMensagemTelaInicial() {
-  exibirMensagem('h1', 'Jogo do número secreto');
-  exibirMensagem('p', 'Escolha um número entre 1 e 10!');
+
+//gera numero aleatorio de 1 a 10
+function numeroAleatorio() {
+  return Math.floor(Math.random() * 10) + 1;
 }
+let numeroSecreto = numeroAleatorio();
 
-
+let i = 1;
+//gera o resultado
 function verificarChute() {
   let chute = document.querySelector('input').value;
-
+  
   if (chute == numeroSecreto) {
-    let palavraTentativa = tentativa == 1 ? 'tentativa' : ' tentativas';
-    exibirMensagem('p', ` Você descobriu o número secreto com ${tentativa} ${palavraTentativa}!`);
-    document.getElementById('reiniciar').removeAttribute('disabled');
+    let tentativa = i == 1 ? "tentativa":"tentativas";
+    ExibirTextoNaTela('h1', `você acertou em ${i} ${tentativa}`);
+    ExibirTextoNaTela('p', 'Parabéns');
+document.getElementById('reiniciar').removeAttribute('disabled');
 
+    
   } else {
     if (chute > numeroSecreto) {
-      exibirMensagem('p', 'o número é menor!');
+      ExibirTextoNaTela('p', 'O número é menor');
     } else {
-      exibirMensagem('p', 'o número é maior!');
+      ExibirTextoNaTela('p', 'O número é maior');
     }
-    tentativa++;
     limpaCampo();
   }
+  i++;
 
 }
-function limpaCampo() {
-  let limpa = document.querySelector('input');
-  limpa.value = "";
 
+function limpaCampo(){
+  chute = document.querySelector('input');
+  chute.value = '';
 }
-function reiniciarJogo() {
-  numeroSecreto = gerarNumeroAleatorio();
-  limpaCampo();
-  ExibirMensagemTelaInicial()
-  tentativa = 1;
-  document.getElementById('reiniciar').setAttribute('disabled',true);
-}
-
-
-
-
-
