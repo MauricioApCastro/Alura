@@ -1,4 +1,4 @@
-
+let listaDeNumerosSorteados = [];
 MensagemInicial();
 function MensagemInicial(){
   ExibirTextoNaTela('h1', 'Jogo do número secreto');
@@ -15,7 +15,13 @@ function ExibirTextoNaTela(tag, texto) {
 
 //gera numero aleatorio de 1 a 10
 function numeroAleatorio() {
-  return Math.floor(Math.random() * 10) + 1;
+  let numeroEscolhido = parseInt(Math.floor(Math.random() * 10) + 1);
+  if(listaDeNumerosSorteados.includes(numeroEscolhido)){
+    return numeroAleatorio();
+  }else{
+    listaDeNumerosSorteados.push(numeroEscolhido);
+    return numeroEscolhido;
+  }
 }
 let numeroSecreto = numeroAleatorio();
 
