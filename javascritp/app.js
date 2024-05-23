@@ -37,6 +37,10 @@ function verificarChute() {
     MostrarResultado();
 }
 
+function verificarChute() {
+    MostrarResultado();
+}
+
 function limpaCampo() {
     let chute = document.querySelector('input');
     chute.value = "";
