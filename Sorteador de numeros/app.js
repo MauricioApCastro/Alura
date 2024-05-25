@@ -22,5 +22,5 @@ function obterNumeroAleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
+//armazena o númeor aleatório
 let numeroSorteado = gerarNumeroAleatorio(min, max);
