@@ -7,15 +7,15 @@ function sortear() {
     botao = document.getElementById("btn-reiniciar");
     let listaNumero = [];
 
-   // Loop para gerar números aleatórios
-   for (let i = 0; i < quantidade; i++) {
-    let numeroAleatorio;
-    do {
-        numeroAleatorio = gerarNumeroAleatorio(de, ate);
-        //evita a duplicidade
-    } while (listaNumero.includes(numeroAleatorio));
-    listaNumero.push(numeroAleatorio);
-}
+    // Loop para gerar números aleatórios
+    for (let i = 0; i < quantidade; i++) {
+        let numeroAleatorio;
+        do {
+            numeroAleatorio = gerarNumeroAleatorio(de, ate);
+            //evita a duplicidade
+        } while (listaNumero.includes(numeroAleatorio));
+        listaNumero.push(numeroAleatorio);
+    }
     //mostra resultado na tela
     let resultado = document.getElementById("resultado");
     resultado.innerHTML = `<label class="texto__paragrafo">Números sorteados: ${listaNumero}</label>`;
