@@ -13,6 +13,13 @@ function sortear() {
     }
 
     alert(listaNumero);
+    //habilita botão reiniciar
+    let botao = document.getElementById("btn-reiniciar");
+    botao.classList.remove("container__botao-desabilitado");
+    botao.classList.add("container__botao");
+
+    
+
 }
 
 // Função que gera um número aleatório
