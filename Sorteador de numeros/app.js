@@ -11,15 +11,15 @@ function sortear() {
         let numeroAleatorio = gerarNumeroAleatorio(de, ate);
         listaNumero.push(numeroAleatorio);
     }
+//mostra resultado na tela
+let resultado = document.getElementById("resultado");
+resultado.innerHTML = `<label class="texto__paragrafo">Números sorteados: ${listaNumero}</label>`;
 
-    alert(listaNumero);
+    
     //habilita botão reiniciar
     let botao = document.getElementById("btn-reiniciar");
     botao.classList.remove("container__botao-desabilitado");
     botao.classList.add("container__botao");
-
-    
-
 }
 
 // Função que gera um número aleatório
