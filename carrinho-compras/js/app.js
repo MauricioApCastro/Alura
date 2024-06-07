@@ -5,8 +5,8 @@ function adicionar(){
     let produtoPreco = item.split("- R$")
     let produto = produtoPreco[0];
     let preco = produtoPreco[1];
-    alert(produto);
-    alert(preco);
-    alert(quantidade);
-    
+      //calculando o valor do produto
+    let valorProduto = preco * quantidade;
+    alert(valorProduto);
 }
+  
