@@ -1,12 +1,17 @@
-function adicionar(){
+function adicionar() {
     //recuperar os dados do formulário
-    let item = document.getElementById('produto').value;
+    let produto = document.getElementById('produto').value;
     let quantidade = document.getElementById('quantidade').value;
-    let produtoPreco = item.split("- R$")
-    let produto = produtoPreco[0];
-    let preco = produtoPreco[1];
-      //calculando o valor do produto
-    let valorProduto = preco * quantidade;
-    alert(valorProduto);
+    let nomeProduto = produto.split('-')[0];
+    let ValorUnitario = produto.split('R$')[1];
+
+    //calculando o valor do produto
+    let preco = quantidade * ValorUnitario;
+    //adicionando produto no carrinho
+    let carrinho = document.getElementById('lista-produtos');
+    carrinho.innerHTML = carrinho.innerHTML+`<section class="carrinho__produtos__produto">
+          <span class="texto-azul">${quantidade}x</span> ${nomeProduto} <span class="texto-azul">R$${ValorUnitario}</span>
+        </section>`;
+
+
 }
-  
