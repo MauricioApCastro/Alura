@@ -1,4 +1,6 @@
-let total = 0;
+let total ;
+limpar();
+
 
 function adicionar() {
   //recuperar os dados do formulário
@@ -19,5 +21,16 @@ function adicionar() {
   let valorTotal = document.getElementById('valor-total');
   total = total + preco;
   valorTotal.textContent = `R$ ${total}`;
+
+  document.getElementById('quantidade').value = 0;
+
+
+}
+
+function limpar() {
+  total = 0 ;
+  document.getElementById('lista-produtos').innerHTML = "";
+  document.getElementById('valor-total').textContent = `R$ ${0}`;
+
 
 }
