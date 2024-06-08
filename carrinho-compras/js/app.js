@@ -16,8 +16,8 @@ function adicionar() {
           <span class="texto-azul">${quantidade}x</span> ${nomeProduto} <span class="texto-azul">R$${preco}</span>
         </section>`;
 
-  let valorTotal = document.getElementById('valor-total').value;
+  let valorTotal = document.getElementById('valor-total');
   total = total + preco;
-  alert(total);
+  valorTotal.textContent = `R$ ${total}`;
 
 }
