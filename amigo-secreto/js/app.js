@@ -3,9 +3,14 @@ let amigos = [];
 function adicionar() {
     let nomeAmigo = document.getElementById("nome-amigo").value;
     let lista = document.getElementById("lista-amigos");
-    amigos.push(nomeAmigo);
-    lista.textContent = amigos;
-    document.getElementById("nome-amigo").value = '';
+    if (nomeAmigo === '') {
+        alert('Insira o nome');
+        return;
+    } 
+        amigos.push(nomeAmigo);
+        lista.textContent = amigos;
+        document.getElementById("nome-amigo").value = '';
+    
 }
 
 
