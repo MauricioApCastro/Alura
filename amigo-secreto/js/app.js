@@ -1,18 +1,19 @@
 let amigos = [];
+let lista;
 
 function adicionar() {
     let nomeAmigo = document.getElementById("nome-amigo").value;
-    let lista = document.getElementById("lista-amigos");
+    lista = document.getElementById("lista-amigos");
     if (nomeAmigo === '') {
         alert('Insira o nome');
         return;
-    } 
-        amigos.push(nomeAmigo);
-        lista.textContent = amigos;
-        document.getElementById("nome-amigo").value = '';
-    
-}
+    }
+    amigos.push(nomeAmigo);
+    lista.textContent = amigos;
+    document.getElementById("nome-amigo").value = '';
+    liberaBotao();
 
+}
 
 function embaralha(lista) {
 
@@ -26,6 +27,10 @@ function embaralha(lista) {
 }
 
 function sortear() {
+    if (amigos.length <= 3) {
+        alert('Insira pelo menos 4 amigos');
+        return;
+    }
     embaralha(amigos);
     let sorteio = document.getElementById('lista-sorteio');
 
