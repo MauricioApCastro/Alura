@@ -1,4 +1,5 @@
-print('Sabor Express')
+#pula uma linha
+print('Sabor Express\n')
 #menu
 print('1. Cadastrar restaurante')
 print('2. Listar restaurante')
