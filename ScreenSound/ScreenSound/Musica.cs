@@ -5,10 +5,20 @@
     public string Nome { get; set; }
     private bool Assinatura { get; set; }
 
-   
+    public string DescricaoCompleta
+    {
+        get
+        {
+            return $"A música {Nome} pertence a {Artista}";
+        }
+
+
+    }
+
+
     public void EscreveDisponivel(bool valor)
     {
-      Assinatura = valor;
+        Assinatura = valor;
     }
 
     public void ExibirFichaTecnica()
@@ -21,6 +31,7 @@
         {
             Console.WriteLine("Adquira o plano Plus+");
         }
+
 
     }
 
