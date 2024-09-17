@@ -3,7 +3,13 @@
     public string artista;
     public int duracao;
     public string nome;
-    public bool assinatura;
+    private bool assinatura;
+
+   
+    public void EscreveDisponivel(bool valor)
+    {
+      assinatura = valor;
+    }
 
     public void ExibirFichaTecnica()
     {
