@@ -1,7 +1,2 @@
-class Musica
-{
-    public string nome;
-    public DateTime dataLancamento;
-    public int duracao;
-    public bool disponivel;
-}
+//declara uma string e atribui um valor a ela   
+string mensagem = "Seja bem vindo ao Screen Sound!!!!";
